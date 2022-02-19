@@ -5,21 +5,21 @@
 class TmuxFastcopy < Formula
   desc "easymotion-style text copying for tmux."
   homepage "https://github.com/abhinav/tmux-fastcopy"
-  version "0.7.0"
+  version "0.7.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/abhinav/tmux-fastcopy/releases/download/v0.7.0/tmux-fastcopy_0.7.0_Darwin_arm64.tar.gz"
-      sha256 "c290568e9cb4cd3a93fda1be5afd64c7dc042dcc8d7e6785d6b9675ac1b75a65"
+    if Hardware::CPU.intel?
+      url "https://github.com/abhinav/tmux-fastcopy/releases/download/v0.7.1/tmux-fastcopy_0.7.1_Darwin_x86_64.tar.gz"
+      sha256 "0822885cd210d9bd7b07d5eeefed390e771e2b3dffaa9edc621de9e9cc2d0d2a"
 
       def install
         bin.install "tmux-fastcopy"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/abhinav/tmux-fastcopy/releases/download/v0.7.0/tmux-fastcopy_0.7.0_Darwin_x86_64.tar.gz"
-      sha256 "b02d46071489d258f485c9ded7d97bc2dafdca2a9bcae86d84d55455e23ce224"
+    if Hardware::CPU.arm?
+      url "https://github.com/abhinav/tmux-fastcopy/releases/download/v0.7.1/tmux-fastcopy_0.7.1_Darwin_arm64.tar.gz"
+      sha256 "e88755594a54bd86bbb075b12ec6cae5261c061c4e5e34d06ee1bee3029f44ff"
 
       def install
         bin.install "tmux-fastcopy"
@@ -29,16 +29,24 @@ class TmuxFastcopy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abhinav/tmux-fastcopy/releases/download/v0.7.0/tmux-fastcopy_0.7.0_Linux_arm64.tar.gz"
-      sha256 "8972fad60fe98cc5fddd9f7e24f1fede04151f26a0f0c96f458f5d5a9fe698d8"
+      url "https://github.com/abhinav/tmux-fastcopy/releases/download/v0.7.1/tmux-fastcopy_0.7.1_Linux_arm64.tar.gz"
+      sha256 "28b9c046d15c563a3686d11e32f2f9fe33c0dca64d2877d47fe8502cbf95c458"
+
+      def install
+        bin.install "tmux-fastcopy"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/abhinav/tmux-fastcopy/releases/download/v0.7.1/tmux-fastcopy_0.7.1_Linux_armv6.tar.gz"
+      sha256 "19ee87a3100f2e5529deadb13b8f5828d67dc6728aeb9378903094dc251a82e7"
 
       def install
         bin.install "tmux-fastcopy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/abhinav/tmux-fastcopy/releases/download/v0.7.0/tmux-fastcopy_0.7.0_Linux_x86_64.tar.gz"
-      sha256 "e01a15368c5b62fb497126dfa3bdaaaa846ad10132f25c812cd189aa70506f27"
+      url "https://github.com/abhinav/tmux-fastcopy/releases/download/v0.7.1/tmux-fastcopy_0.7.1_Linux_x86_64.tar.gz"
+      sha256 "bce2d89bc5b246d0305ffa07cdbbf19d4a8195437f55b81d1a741f23fc0dfd06"
 
       def install
         bin.install "tmux-fastcopy"
