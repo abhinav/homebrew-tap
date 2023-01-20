@@ -5,21 +5,21 @@
 class Doc2go < Formula
   desc "Your Go documentation, to-go."
   homepage "https://github.com/abhinav/doc2go"
-  version "0.3.0"
+  version "0.4.0"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/abhinav/doc2go/releases/download/v0.3.0/doc2go-darwin-amd64.tar.gz"
-      sha256 "115df92993a12ddc834265fb318d50d95faec22d906a3eb7ba4bb9d125c1d969"
+    if Hardware::CPU.arm?
+      url "https://github.com/abhinav/doc2go/releases/download/v0.4.0/doc2go-darwin-arm64.tar.gz"
+      sha256 "62b9670394ed338af0233169d9ecbb148ccb0bf4a7d96b48fb495e13b1f5a874"
 
       def install
         bin.install "doc2go"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/abhinav/doc2go/releases/download/v0.3.0/doc2go-darwin-arm64.tar.gz"
-      sha256 "61271be5b74e82b65dd26892c723987f62de426041b21366f446d53dd6014a27"
+    if Hardware::CPU.intel?
+      url "https://github.com/abhinav/doc2go/releases/download/v0.4.0/doc2go-darwin-amd64.tar.gz"
+      sha256 "f7064a6ec5b151492f4bcbc0ae43e14312a5511205454eca69ce30f82fd56914"
 
       def install
         bin.install "doc2go"
@@ -28,25 +28,25 @@ class Doc2go < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/abhinav/doc2go/releases/download/v0.3.0/doc2go-linux-armv6.tar.gz"
-      sha256 "7b4a6c2becb1982225956e691056c819c6b0b9c4c58193e63f103ea32e9c6e2e"
-
-      def install
-        bin.install "doc2go"
-      end
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abhinav/doc2go/releases/download/v0.3.0/doc2go-linux-arm64.tar.gz"
-      sha256 "17e133905b63e8ba80c10b64c1773862362ac521e1a4d881e4ec825c35702554"
+      url "https://github.com/abhinav/doc2go/releases/download/v0.4.0/doc2go-linux-arm64.tar.gz"
+      sha256 "edee5161fad7a700c2414bfe571119f7a6cd73d5a323f4359905dfae085a5ea7"
 
       def install
         bin.install "doc2go"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/abhinav/doc2go/releases/download/v0.3.0/doc2go-linux-amd64.tar.gz"
-      sha256 "18d87c7297ff3b136a9db6b582fce806b7fde769edad61757af2d0717440fe58"
+      url "https://github.com/abhinav/doc2go/releases/download/v0.4.0/doc2go-linux-amd64.tar.gz"
+      sha256 "1aab9f1eb67b47b94c06b357b50a0f10151362096aa41b05f90af23eeb077de3"
+
+      def install
+        bin.install "doc2go"
+      end
+    end
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/abhinav/doc2go/releases/download/v0.4.0/doc2go-linux-armv6.tar.gz"
+      sha256 "0418e855fd580fd77a442343c18eeaa0cda309861765dcb9c52740ac5ffe8576"
 
       def install
         bin.install "doc2go"
