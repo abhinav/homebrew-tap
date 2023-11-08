@@ -5,21 +5,21 @@
 class Stitchmd < Formula
   desc "Stitch multiple Markdown files together into a single document."
   homepage "https://github.com/abhinav/stitchmd"
-  version "0.8.0"
+  version "0.8.1"
   license "GPL-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/abhinav/stitchmd/releases/download/v0.8.0/stitchmd-darwin-amd64.tar.gz"
-      sha256 "8ad3dd46e0ba0c0c6d7fb0ac99ee6a1306921a040f323badce4d6b68c3ad1263"
+    if Hardware::CPU.arm?
+      url "https://github.com/abhinav/stitchmd/releases/download/v0.8.1/stitchmd-darwin-arm64.tar.gz"
+      sha256 "11d5a95db03eeb80343359244acb2887d77108ad9be3ac72de856a096c6221f9"
 
       def install
         bin.install "stitchmd"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/abhinav/stitchmd/releases/download/v0.8.0/stitchmd-darwin-arm64.tar.gz"
-      sha256 "4347800242cc6fb9f0bae66b44d09c3866faf326aff0d982d3b50642cc5cc594"
+    if Hardware::CPU.intel?
+      url "https://github.com/abhinav/stitchmd/releases/download/v0.8.1/stitchmd-darwin-amd64.tar.gz"
+      sha256 "72baf6e3d37ed8f751457e484a281679c60fd229823dd1e7763707e51c7e93f1"
 
       def install
         bin.install "stitchmd"
@@ -29,24 +29,24 @@ class Stitchmd < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abhinav/stitchmd/releases/download/v0.8.0/stitchmd-linux-arm64.tar.gz"
-      sha256 "c22124fb6da2a2af1a2af1c1ff7370e5eccc9781645cba7cc55f22661bb34281"
+      url "https://github.com/abhinav/stitchmd/releases/download/v0.8.1/stitchmd-linux-arm64.tar.gz"
+      sha256 "fe6ae6c511721228414c58542490c4d337eeadacb91f837580be0f97a321a322"
 
       def install
         bin.install "stitchmd"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/abhinav/stitchmd/releases/download/v0.8.0/stitchmd-linux-amd64.tar.gz"
-      sha256 "8d8985bfbd39f1c438f70e2de0c09647072b5e7d1462f7132c4cecffc169d596"
+      url "https://github.com/abhinav/stitchmd/releases/download/v0.8.1/stitchmd-linux-amd64.tar.gz"
+      sha256 "c1f7235a96bc0bc31bdf186b841d537eedbe18ec11df16bceac9e9543e3d5145"
 
       def install
         bin.install "stitchmd"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/abhinav/stitchmd/releases/download/v0.8.0/stitchmd-linux-armv6.tar.gz"
-      sha256 "b6ec2a4c7c22fb55fd296c39c533ad724c11ece3a76ac4255953cfcd7d994048"
+      url "https://github.com/abhinav/stitchmd/releases/download/v0.8.1/stitchmd-linux-armv6.tar.gz"
+      sha256 "e323f6af8bb659168820fbeac6376629211ff21054c64880ae416e002da69673"
 
       def install
         bin.install "stitchmd"
