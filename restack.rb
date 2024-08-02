@@ -4,23 +4,23 @@
 class Restack < Formula
   desc "Makes interactive Git rebase aware of your branches."
   homepage "https://github.com/abhinav/restack"
-  version "0.7.0"
+  version "0.8.0"
   license "GPL-2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abhinav/restack/releases/download/v0.7.0/restack-darwin-amd64.tar.gz"
-      sha256 "ae58641475f56f69a836463a006d089c1660799c56fa9fd5998604afcf2f4c1c"
+      url "https://github.com/abhinav/restack/releases/download/v0.8.0/restack-darwin-amd64.tar.gz"
+      sha256 "63875f9f542f1c4f6bd985de42f435cec32057cc4d72061d1012cd6c556cbe12"
 
       def install
         bin.install "restack"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abhinav/restack/releases/download/v0.7.0/restack-darwin-arm64.tar.gz"
-      sha256 "18b572781ba73c6aef8934b98f68f2459bf2453ef94a69bdf0b0762888c3cb3e"
+      url "https://github.com/abhinav/restack/releases/download/v0.8.0/restack-darwin-arm64.tar.gz"
+      sha256 "3ef35811b5d896266fef644267adcef9970f0afeadc93525791f71c7554b2be5"
 
       def install
         bin.install "restack"
@@ -30,24 +30,24 @@ class Restack < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/abhinav/restack/releases/download/v0.7.0/restack-linux-arm64.tar.gz"
-      sha256 "97f13f1eb494125dbc05451ef22f3811a6da655b4a61dde768848a3536806ea8"
+      url "https://github.com/abhinav/restack/releases/download/v0.8.0/restack-linux-arm64.tar.gz"
+      sha256 "8b1935eea19b1455fad442088ba085e125010cdc8f91d0f2afdb4f8cb4a4ae2a"
 
       def install
         bin.install "restack"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/abhinav/restack/releases/download/v0.7.0/restack-linux-amd64.tar.gz"
-      sha256 "7e1adc21889c6ad550db37f235438a38aa1fd8fc32b874c808fdda699e34e4ac"
+      url "https://github.com/abhinav/restack/releases/download/v0.8.0/restack-linux-amd64.tar.gz"
+      sha256 "55d79209e3ee2b6909458df20e4052003f5aea5f44029c79c994f79674e37ac3"
 
       def install
         bin.install "restack"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/abhinav/restack/releases/download/v0.7.0/restack-linux-armv7.tar.gz"
-      sha256 "926b28b9ef602a665ee29d643b0fa136ed7c3f8cc3c465b9f9cf637573aa8341"
+      url "https://github.com/abhinav/restack/releases/download/v0.8.0/restack-linux-armv7.tar.gz"
+      sha256 "745359f1e780776f78f28e2831dbb1a8efa64d83213fe3f527c7a49d817139f4"
 
       def install
         bin.install "restack"
