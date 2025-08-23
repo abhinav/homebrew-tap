@@ -2,7 +2,7 @@
 cask "requiredfield" do
   desc "Go linter that checks for required fields in structs"
   homepage "https://github.com/abhinav/requiredfield"
-  version "0.6.1"
+  version "0.7.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "requiredfield" do
 
   on_macos do
     on_intel do
-      url "https://github.com/abhinav/requiredfield/releases/download/v0.6.1/requiredfield.Darwin-x86_64.tar.gz"
-      sha256 "1b553a66ca98f46496e888177b648fb45bc19ded4bacd07b72c3fc738b707aab"
+      url "https://github.com/abhinav/requiredfield/releases/download/v0.7.0/requiredfield.Darwin-x86_64.tar.gz"
+      sha256 "c39e43d0cde185f86eb252cce37c3cdba2f849f474aa80421ef91b07ea30fac3"
     end
     on_arm do
-      url "https://github.com/abhinav/requiredfield/releases/download/v0.6.1/requiredfield.Darwin-arm64.tar.gz"
-      sha256 "ad533b3941b4acf82c56772b9c28f8cc89d1ec20da2334866b2fafac889956e8"
+      url "https://github.com/abhinav/requiredfield/releases/download/v0.7.0/requiredfield.Darwin-arm64.tar.gz"
+      sha256 "481063bd98eaa9f2f0aba87ca07640d9210e35bbda36db52897b9f735dbbfb56"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/abhinav/requiredfield/releases/download/v0.6.1/requiredfield.Linux-x86_64.tar.gz"
-      sha256 "f3d4222985cb59bbbd1f98f60d3d70afcae54c77f982368b217253bc28f8ec51"
+      url "https://github.com/abhinav/requiredfield/releases/download/v0.7.0/requiredfield.Linux-x86_64.tar.gz"
+      sha256 "5451fe4fe93c7d8daa7845e9d5e7206352ed8073a458c6ca4187f6aecb59b47a"
     end
     on_arm do
-      url "https://github.com/abhinav/requiredfield/releases/download/v0.6.1/requiredfield.Linux-aarch64.tar.gz"
-      sha256 "b0c37f329e0f13609e0dc1540ec7cc497ccedb793ce2a09a2f64f67f4f6a12c3"
+      url "https://github.com/abhinav/requiredfield/releases/download/v0.7.0/requiredfield.Linux-aarch64.tar.gz"
+      sha256 "32d8f3b0ca50ed582afc2bfcfc25955ac10061b1df6b8b4c65cdde78e1e2a438"
     end
   end
 
