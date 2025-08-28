@@ -2,7 +2,7 @@
 cask "doc2go" do
   desc "Your Go documentation, to-go."
   homepage "https://github.com/abhinav/doc2go"
-  version "0.9.0"
+  version "0.9.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,29 @@ cask "doc2go" do
 
   on_macos do
     on_intel do
-      url "https://github.com/abhinav/doc2go/releases/download/v0.9.0/doc2go-darwin-amd64.tar.gz"
-      sha256 "9b2a23c65dcf007be29677517997b6325aedf6cec1f7d01431b081bdc7217e51"
+      url "https://github.com/abhinav/doc2go/releases/download/v0.9.1/doc2go-darwin-amd64.tar.gz"
+      sha256 "def54d7d8e7f2ef04fae9160ae986939d94c403d03504f4081811707f77ae4f8"
     end
     on_arm do
-      url "https://github.com/abhinav/doc2go/releases/download/v0.9.0/doc2go-darwin-arm64.tar.gz"
-      sha256 "139cab8189cf3fcefdcfaa1739f130bcdf5d9a601a5d7c598ddb91cbc03b0dfb"
+      url "https://github.com/abhinav/doc2go/releases/download/v0.9.1/doc2go-darwin-arm64.tar.gz"
+      sha256 "8ad06bcde9b5700e74bff2f3505473f2ec3e9a4a18b28299f1419a8d418d0124"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/abhinav/doc2go/releases/download/v0.9.0/doc2go-linux-amd64.tar.gz"
-      sha256 "6c75533b098fce39f7f51bcb254ae2f350bb482eba0de04b399a012f088bfd4c"
+      url "https://github.com/abhinav/doc2go/releases/download/v0.9.1/doc2go-linux-amd64.tar.gz"
+      sha256 "8b2977aa7f28cdcb484a53a1bd77cb9fa720648d32a439555fa33d890675f0f4"
     end
     on_arm do
-      url "https://github.com/abhinav/doc2go/releases/download/v0.9.0/doc2go-linux-arm64.tar.gz"
-      sha256 "25aa807ad8aa10fc9753701766185f9353d9532bffe759c8431b32b00ffdf111"
+      url "https://github.com/abhinav/doc2go/releases/download/v0.9.1/doc2go-linux-arm64.tar.gz"
+      sha256 "a2bd41d0f0d8bdb85127093cc2ddaf917b1f4644613409540d48ace3a682ee44"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/doc2go"]
     end
   end
 
