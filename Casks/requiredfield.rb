@@ -2,7 +2,7 @@
 cask "requiredfield" do
   desc "Go linter that checks for required fields in structs"
   homepage "https://github.com/abhinav/requiredfield"
-  version "0.7.0"
+  version "0.7.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,29 @@ cask "requiredfield" do
 
   on_macos do
     on_intel do
-      url "https://github.com/abhinav/requiredfield/releases/download/v0.7.0/requiredfield.Darwin-x86_64.tar.gz"
-      sha256 "c39e43d0cde185f86eb252cce37c3cdba2f849f474aa80421ef91b07ea30fac3"
+      url "https://github.com/abhinav/requiredfield/releases/download/v0.7.1/requiredfield.Darwin-x86_64.tar.gz"
+      sha256 "7b6cea38a7265d86a631193dc72609fec8a47130a95fb913db2f85b02601c638"
     end
     on_arm do
-      url "https://github.com/abhinav/requiredfield/releases/download/v0.7.0/requiredfield.Darwin-arm64.tar.gz"
-      sha256 "481063bd98eaa9f2f0aba87ca07640d9210e35bbda36db52897b9f735dbbfb56"
+      url "https://github.com/abhinav/requiredfield/releases/download/v0.7.1/requiredfield.Darwin-arm64.tar.gz"
+      sha256 "ce1050f9d111f81e8ecf72f20aba0b5f2aab7b18dbb2d5c69eb09a549d21a749"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/abhinav/requiredfield/releases/download/v0.7.0/requiredfield.Linux-x86_64.tar.gz"
-      sha256 "5451fe4fe93c7d8daa7845e9d5e7206352ed8073a458c6ca4187f6aecb59b47a"
+      url "https://github.com/abhinav/requiredfield/releases/download/v0.7.1/requiredfield.Linux-x86_64.tar.gz"
+      sha256 "05db922b5718cd06b01a68b20b2bbcb2f0c6638c8a74889a5fcaf48c57c9406c"
     end
     on_arm do
-      url "https://github.com/abhinav/requiredfield/releases/download/v0.7.0/requiredfield.Linux-aarch64.tar.gz"
-      sha256 "32d8f3b0ca50ed582afc2bfcfc25955ac10061b1df6b8b4c65cdde78e1e2a438"
+      url "https://github.com/abhinav/requiredfield/releases/download/v0.7.1/requiredfield.Linux-aarch64.tar.gz"
+      sha256 "a18458a66da5edd8e61f206e290fa4adfa7def6bca787536d1731d8ec70ad5f0"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/requiredfield"]
     end
   end
 
