@@ -7,6 +7,8 @@ class Doc2go < Formula
   homepage "https://github.com/abhinav/doc2go"
   version "0.8.1"
   license "Apache-2.0"
+  
+  disable! date: "2025-11-08", because: "was migrated to a cask", replacement_cask: "abhinav/tap/doc2go"
 
   on_macos do
     if Hardware::CPU.intel?
