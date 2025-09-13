@@ -5,13 +5,13 @@
 class GitSpice < Formula
   desc "A tool for stacking Git branches."
   homepage "https://abhinav.github.io/git-spice/"
-  version "0.17.0"
+  version "0.17.1"
   license "GPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/abhinav/git-spice/releases/download/v0.17.0/git-spice.Darwin-x86_64.tar.gz"
-      sha256 "f982e3a72e738caf8d92c5abcaf5b543cde7d5ed1042aeffcf1a5be424bd91a0"
+      url "https://github.com/abhinav/git-spice/releases/download/v0.17.1/git-spice.Darwin-x86_64.tar.gz"
+      sha256 "c9ad81b24dc23d94350c03d3b7e67b42478f61f7b55f9bca0911a9e5919bbf46"
 
       def install
         bin.install "gs"
@@ -19,8 +19,8 @@ class GitSpice < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/abhinav/git-spice/releases/download/v0.17.0/git-spice.Darwin-arm64.tar.gz"
-      sha256 "0d18b65422d3886468c5961ff07f78e8f580472cd7ecfb2da3325db1029d2c02"
+      url "https://github.com/abhinav/git-spice/releases/download/v0.17.1/git-spice.Darwin-arm64.tar.gz"
+      sha256 "d49cf34715d570d543b44a327beed081303f49d3a02c8473c99b7dd35369b204"
 
       def install
         bin.install "gs"
@@ -30,25 +30,25 @@ class GitSpice < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/abhinav/git-spice/releases/download/v0.17.0/git-spice.Linux-x86_64.tar.gz"
-      sha256 "c7f9a387df1ff5865290983ee40152b83be4bd843f242d28a01f0e5bd92bcf45"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/abhinav/git-spice/releases/download/v0.17.1/git-spice.Linux-x86_64.tar.gz"
+      sha256 "088d2adc4abd0a0cb5190b9e09bae28140c52fdf08dad96a089f7001d4b3c117"
       def install
         bin.install "gs"
         generate_completions_from_executable(bin/"gs", "shell", "completion")
       end
     end
-    if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
-      url "https://github.com/abhinav/git-spice/releases/download/v0.17.0/git-spice.Linux-armv6.tar.gz"
-      sha256 "bc72445af79ba0c51c5a811cb1e5eae00846af2bd27eb3a3c1ecf66b72ce809a"
+    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+      url "https://github.com/abhinav/git-spice/releases/download/v0.17.1/git-spice.Linux-armv6.tar.gz"
+      sha256 "96d4073cab2db09e174fc42c51051744f9b7f28383815d364350d990bccdec89"
       def install
         bin.install "gs"
         generate_completions_from_executable(bin/"gs", "shell", "completion")
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/abhinav/git-spice/releases/download/v0.17.0/git-spice.Linux-aarch64.tar.gz"
-      sha256 "aae51f8a1f347ab13416a9071d892a3e909398c7ac39684dab0e4e7259b720f0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/abhinav/git-spice/releases/download/v0.17.1/git-spice.Linux-aarch64.tar.gz"
+      sha256 "aeea3da7dd7d000c53915e82503b044502b011c2273f5a904eee21d096826ec7"
       def install
         bin.install "gs"
         generate_completions_from_executable(bin/"gs", "shell", "completion")
