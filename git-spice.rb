@@ -8,6 +8,8 @@ class GitSpice < Formula
   version "0.17.1"
   license "GPL-3.0-or-later"
 
+  disable! date: "2025-11-08", because: "was migrated to a cask", replacement_cask: "abhinav/tap/git-spice"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/abhinav/git-spice/releases/download/v0.17.1/git-spice.Darwin-x86_64.tar.gz"

@@ -9,7 +9,7 @@ cask "git-spice" do
     skip "Auto-generated on release."
   end
 
-  binary "git-spice"
+  binary "gs"
 
   on_macos do
     on_intel do
