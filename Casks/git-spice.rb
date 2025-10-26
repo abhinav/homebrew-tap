@@ -3,7 +3,7 @@ cask "git-spice" do
   name "git-spice"
   desc "A tool for stacking Git branches."
   homepage "https://abhinav.github.io/git-spice/"
-  version "0.19.0"
+  version "0.19.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "git-spice" do
   on_macos do
     on_intel do
       url "https://github.com/abhinav/git-spice/releases/download/v#{version}/git-spice.Darwin-x86_64.tar.gz"
-      sha256 "d3649ec7fe6c353e17287c9d3c129cb3b5d6ce83c640ef779d80712a1087b3aa"
+      sha256 "4451ce8981b7ef507ef7b75e5d7e91ccd9c3a52813e6f44f7e8bc8ae73040492"
     end
     on_arm do
       url "https://github.com/abhinav/git-spice/releases/download/v#{version}/git-spice.Darwin-arm64.tar.gz"
-      sha256 "07ecb51d242d4d14243ee5655632a44361dc9bf2d4667630faec2df0bbb723da"
+      sha256 "ec0769045ea6fcdbd13e3bfea951b01ed77d309273a373c338d7e7b394a363d0"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/abhinav/git-spice/releases/download/v#{version}/git-spice.Linux-x86_64.tar.gz"
-      sha256 "82f759db438ca5b007850974e643ae68ce3d9065b09629981bfb6216d6fe8096"
+      sha256 "8c0524b631fe74d126aa31fb5b1edba8fa186294de562a0dcc1ca51ada6f032c"
     end
     on_arm do
       url "https://github.com/abhinav/git-spice/releases/download/v#{version}/git-spice.Linux-aarch64.tar.gz"
-      sha256 "a5d9d425bd1857d2dd6c143f3ed6404c66d23ae5d7735b15a2f9bfe17489b8a5"
+      sha256 "2432513c63fc0a37bb088c52a112d721a326d164d6af72b32691dc802f2ac24a"
     end
   end
 
