@@ -8,6 +8,7 @@ class Restack < Formula
   license "GPL-2.0"
 
   depends_on "git"
+  deprecate! date: "2025-05-16", because: "Functionality offered natively by Git with 'git rebase --update-refs'."
 
   on_macos do
     if Hardware::CPU.intel?
